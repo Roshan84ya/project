@@ -1,0 +1,67 @@
+1st module	:-	pyttsx3
+2nd module	:-	speech_recognition
+3rd module	:-	pyaudio
+4th module	:-	datetime
+5th module	:-	wikipedia
+6th module	:-	webbrowser
+7th module	:-	OS
+8th module	:-	smtplib
+
+#################  1st module#########################
+
+pyttsx3
+
+first object :-
+		
+pyttsx3.init([driverName : string, debug : bool])
+
+Name of the pyttsx3.drivers module to load and use. Defaults to the best available driver for the platform, currently:
+
+	sapi5 - SAPI5 on Windows
+	nsss - NSSpeechSynthesizer on Mac OS X
+	espeak - eSpeak on every other platform
+because we are using window so we pass the argument sapi5
+	engine=pyttsx3.init('sapi5')
+
+###################################################################
+
+getProperty(name : string) → object
+Gets the current value of an engine property.
+
+properties are listes :-
+1st:- voices 
+	getproperty(voices) it will list all the voices stores in it.(List of pyttsx3.voice.Voice descriptor objects.)
+2nd propert:- rate:
+	getproperty(rate) it says intereger words per minute and the default value is 200 words per minute.
+		
+3rd property :- volume
+	
+	getproperty(volume) :- Floating point volume in the range of 0.0 to 1.0 inclusive. Defaults to 1.0.
+4th property:
+	say("hello")
+	say(text : unicode, name : string) → None
+	Queues a command to speak an utterance. The speech is output according to the properties set before this command in the queue.
+
+	Parameters:	
+	text – Text to speak.
+	name – Name to associate with the utterance. Included in notifications about this utterance.
+	
+5th property:
+	runAndWait() 
+	locks while processing all currently queued commands. Invokes callbacks for engine notifications appropriately. 
+	Returns when all commands queued before this call are emptied from the queue.
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
